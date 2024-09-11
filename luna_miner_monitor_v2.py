@@ -97,7 +97,7 @@ class MiningStatusWidget(QWidget):
                 ips = self.miner_info[box_no]
                 normal_count = get_container_box_ips(ips)
                 new_status = 0
-                if normal_count > 15:
+                if normal_count * 100 / len(ips) > 60:
                     new_status = 0
                 else:
                     new_status = -1
