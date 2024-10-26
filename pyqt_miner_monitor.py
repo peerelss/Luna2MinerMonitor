@@ -28,7 +28,7 @@ def get_box_mode(box_no):
     for r in result:
         if r == 0:
             count_0 = count_0 + 1
-    if count_0 >= 20:
+    if count_0 >= 10:
         return 0
     else:
         return -1
@@ -65,11 +65,12 @@ class MiningStatusWidget(QWidget):
         # 创建10个矿箱的状态显示
         self.status_labels = []
         self.miner_ips = [6, 7, 8, 9, 10, 5, 2, 1, 3, 4]  # 矿箱
-
+        self.miner_statues = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for i in range(10):
             label = QLabel()
             label.setAlignment(Qt.AlignCenter)
-            label.setFixedSize(100, 100)
+            label.setFixedSize(150, 150)  # 调整尺寸以适应更大的文字
+            label.setStyleSheet("font-size: 24px;")  # 字体调大一倍
             self.status_labels.append(label)
 
             # 将矿箱放置在网格布局中
@@ -93,18 +94,31 @@ class MiningStatusWidget(QWidget):
     def update_status(self):
         for i, ip in enumerate(self.miner_ips):
             status = get_box_mode(ip)
+            if status != self.miner_statues[i]:
+                # 矿机状态改变
+                print('box no status changed')
+                play_music()
+            self.miner_statues[i] = status
             if status == 0:
-                self.status_labels[i].setStyleSheet("background-color: green; border-radius: 50px;")
+                self.status_labels[i].setStyleSheet("background-color: green;font-size: 24px; border-radius: 50px;")
                 self.status_labels[i].setText(f"{i + 1}\n正常")
+
             else:
-                self.status_labels[i].setStyleSheet("background-color: red; border-radius: 50px;")
+                self.status_labels[i].setStyleSheet("background-color: red;font-size: 24px; border-radius: 50px;")
                 self.status_labels[i].setText(f"{i + 1}\n不正常")
-                mixer.init()
-                mixer.music.load('2216.mp3')
-                mixer.music.play()
+                # mixer.init()
+                # mixer.music.load('2216.mp3')
+                # mixer.music.play()
         # 更新最后更新时间
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M")
         self.time_label.setText(f"最后更新时间: {current_time}")
+        self.time_label.setStyleSheet("font-size: 24px;")  # 字体调大一倍
+
+
+def play_music():
+    mixer.init()
+    mixer.music.load('2216.mp3')
+    mixer.music.play()
 
 
 def main():
