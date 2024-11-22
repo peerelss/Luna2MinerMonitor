@@ -23,7 +23,7 @@ def get_box_mode(box_no):
     result = []
     for ip2 in ip_range:
         for ip3 in ip_3:
-            result.append(get_miner_mode("11." + str(box_no) + '.' + str(ip2) + '.' + str(ip3)))
+            result.append(get_miner_mode("10." + str(box_no) + '.' + str(ip2) + '.' + str(ip3)))
     count_0 = 0
     for r in result:
         if r == 0:
