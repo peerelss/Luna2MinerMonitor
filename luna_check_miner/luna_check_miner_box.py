@@ -19,7 +19,7 @@ def get_miner_luna_a():
 
 
 def get_miner_luna_b():
-    file_p_luna_a = r'C:\Users\MSI\Downloads\二期比特大陆s19xp型号IP和SN统计.xlsx'
+    file_p_luna_a = r'C:\Users\MSI\Downloads\二期比特大陆s19xp型号IP和SN统计(1).xlsx'
     box_list = ['1号厂房', "4号厂房", '5号厂房', '6号厂房', '7号厂房', '8号厂房', '9号厂房', '10号厂房', '11号厂房',
                 '12号厂房', '13号厂房', '14号厂房', '15号厂房']
     total_sn_list_b = []
@@ -29,7 +29,7 @@ def get_miner_luna_b():
     return total_sn_list_b
 
 
-def write_sn_to_excel(list_sn):
+def write_sn_to_excel(list_sn, file_name):
     wb = Workbook()
     ws = wb.active
     ws.title = "Sheet1"
@@ -39,7 +39,7 @@ def write_sn_to_excel(list_sn):
         ws.append(row)
 
     # 保存为 Excel 文件
-    file_path = "example2.xlsx"
+    file_path = file_name
     wb.save(file_path)
 
     print(f"数据已成功保存到 {file_path}")
@@ -74,10 +74,20 @@ def get_sn_by_ip(ip):
     return response.json()['serinum']
 
 
-if __name__ == '__main__':
-    list_luna_check_a = get_miner_detail_by_file_and_name(file_check_luna_a, 'Sheet1')
-    list_luna_check_b = get_miner_detail_by_file_and_name(file_check_luna_b, 'Sheet1')
-    check_sn_list_a = [row[0] for row in list_luna_check_a if len(row) > 0]
+def get_all_s21_151t_sn():
+    file_p_luna_a = r'C:\Users\MSI\Downloads\二期比特大陆s19xp型号IP和SN统计(1).xlsx'
+    box_list = ['1号厂房', '8号厂房', '9号厂房', '10号厂房']
+    total_sn_list_b = []
+    for box in box_list:
+        box_sn = get_miner_detail_by_file_and_name(file_p_luna_a, box)
+        total_sn_list_b = total_sn_list_b + box_sn
+    return total_sn_list_b
+
+
+def check_sn():
+    #  list_luna_check_a = get_miner_detail_by_file_and_name(file_check_luna_a, 'Sheet1')
+    list_luna_check_b = get_miner_detail_by_file_and_name(r"C:\Users\MSI\Documents\luna\doa.xlsx", 'Sheet1')
+    doa_sn = [row[1] for row in list_luna_check_b if len(row) > 1]
     # check_sn_list_b = [row[4] for row in list_luna_check_b if len(row) > 4]
     # print(check_sn_list_a)
     # for sn_a in list_luna_sn_a:
@@ -86,6 +96,11 @@ if __name__ == '__main__':
     total_sn_list_luna_b = get_miner_luna_b()
     result_sn_location = []
     for t in total_sn_list_luna_b:
-        if t[2] in check_sn_list_a:
+        if t[2] in doa_sn:
             result_sn_location.append(t)
-    write_sn_to_excel(result_sn_location)
+    write_sn_to_excel(result_sn_location, 'doa1.xlsx')
+
+
+if __name__ == '__main__':
+    s21_sn = get_all_s21_151t_sn()
+    write_sn_to_excel(s21_sn, 's21_sn.xlsx')
