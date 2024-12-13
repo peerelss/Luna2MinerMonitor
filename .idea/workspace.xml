@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c730cd-50c0-483f-a0bb-c58f200df388" name="Changes" comment="add config json">
-      <change afterPath="$PROJECT_DIR$/luna_check_miner/luna_check_miner_box.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/11.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/12.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/13.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/14.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/15.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/16.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/17.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/20.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/21.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/22.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/23.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/24.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/25.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/26.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/27.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/29.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/auth/30.auth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upgrade_miner_config/upgrade_miner_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Luna2MinerMonitor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Luna2MinerMonitor.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luna_check_miner/light_sn_by_xlsx.py" beforeDir="false" afterPath="$PROJECT_DIR$/luna_check_miner/light_sn_by_xlsx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyqt_miner_monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_miner_monitor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +53,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/peerelss/Luna2MinerMonitor.git&quot;,
-    &quot;accountId&quot;: &quot;eda2bb20-acbb-4acc-81b3-047f4e321f59&quot;
+    &quot;accountId&quot;: &quot;c3531346-5e98-4de8-bd4a-225da803ab11&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -46,30 +65,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.change_ip.executor&quot;: &quot;Run&quot;,
-    &quot;Python.luna_check_miner_box.executor&quot;: &quot;Run&quot;,
-    &quot;Python.luna_miner_monitor_v2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.miner_monitor_utils.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pyqt_miner_monitor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pyqt_minier_change_ip.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sn_total_scan.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kevin/PycharmProjects/Luna2MinerMonitor&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.change_ip.executor": "Run",
+    "Python.light_sn_by_xlsx.executor": "Run",
+    "Python.luna_check_miner_box.executor": "Run",
+    "Python.luna_miner_monitor_v2.executor": "Run",
+    "Python.miner_monitor_utils.executor": "Run",
+    "Python.pyqt_miner_monitor.executor": "Run",
+    "Python.pyqt_minier_change_ip.executor": "Run",
+    "Python.sn_total_scan.executor": "Run",
+    "Python.upgrade_miner_config.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/MSI/PycharmProjects/Luna2MinerMonitor/upgrade_miner_config/auth",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MSI\PycharmProjects\Luna2MinerMonitor\upgrade_miner_config\auth" />
+      <recent name="C:\Users\MSI\PycharmProjects\Luna2MinerMonitor\upgrade_miner_config" />
       <recent name="C:\Users\kevin\PycharmProjects\Luna2MinerMonitor" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.luna_check_miner_box">
-    <configuration name="change_ip" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.upgrade_miner_config">
+    <configuration name="light_sn_by_xlsx" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Luna2MinerMonitor" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,11 +101,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/luna_check_miner" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/change_ip.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/luna_check_miner/light_sn_by_xlsx.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,7 +136,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="luna_miner_monitor_v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pyqt_miner_monitor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Luna2MinerMonitor" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,7 +149,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/luna_miner_monitor_v2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqt_miner_monitor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,7 +180,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sn_total_scan" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="upgrade_miner_config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Luna2MinerMonitor" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,11 +189,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/upgrade_miner_config" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sn_total_scan.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/upgrade_miner_config/upgrade_miner_config.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.upgrade_miner_config" />
+        <item itemvalue="Python.pyqt_miner_monitor" />
+        <item itemvalue="Python.light_sn_by_xlsx" />
         <item itemvalue="Python.luna_check_miner_box" />
         <item itemvalue="Python.pyqt_minier_change_ip" />
-        <item itemvalue="Python.change_ip" />
-        <item itemvalue="Python.sn_total_scan" />
-        <item itemvalue="Python.luna_miner_monitor_v2" />
       </list>
     </recent_temporary>
   </component>
