@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QGridLayout, QLa
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtMultimedia import QSound
 from datetime import datetime
-
+from pygame import mixer  # Load the popular external library
 from miner_monitor_utils import get_container_box_ips
 
 
@@ -24,7 +24,7 @@ class MiningStatusWidget(QWidget):
 
         self.status_labels = []
         self.monitor_buttons = []
-        self.miner_statuses = [None] * len(self.miners)  # 初始化矿箱状态列表
+        self.miner_statuses = [0] * len(self.miners)  # 初始化矿箱状态列表
 
         # 创建矿箱的状态显示及切换按钮
         for miner in self.miners:
@@ -72,7 +72,7 @@ class MiningStatusWidget(QWidget):
         self.timer.timeout.connect(self.update_status)
 
         # 设置提示音
-        self.alert_sound = QSound("alert.wav")
+        self.alert_sound = QSound("2216.mp3")
 
     def load_miner_config(self, filename):
         with open(filename, 'r') as file:
@@ -100,10 +100,11 @@ class MiningStatusWidget(QWidget):
                 if normal_count * 100 / len(ips) > 60:
                     new_status = 0
                 else:
+
                     new_status = -1
                 if self.miner_statuses[i] is not None and self.miner_statuses[i] != new_status:
                     self.alert_sound.play()  # 状态变化时播放提示音
-
+                    play_music()
                 self.miner_statuses[i] = new_status
 
                 if new_status == 0:
@@ -125,7 +126,10 @@ class MiningStatusWidget(QWidget):
             label.setStyleSheet("background-color: gray; border-radius: 50px; font-size: 24px;")
             label.setText("待机")
             self.miner_statuses[i] = None
-
+def play_music():
+    mixer.init()
+    mixer.music.load('2216.mp3')
+    mixer.music.play()
 
 def main():
     app = QApplication(sys.argv)

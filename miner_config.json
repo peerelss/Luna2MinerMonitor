@@ -63,14 +63,14 @@
       "ip": "192.168.0.9",
       "row": 1,
       "col": 1,
-      "monitor": false
+      "monitor": true
     },
     {
       "id": "M10",
       "ip": "192.168.0.10",
       "row": 1,
       "col": 2,
-      "monitor": false
+      "monitor": true
     },
     {
       "id": "M11",
