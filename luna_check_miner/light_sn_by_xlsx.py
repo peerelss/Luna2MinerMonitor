@@ -1,6 +1,6 @@
 import pandas as pd
-
-luna_b_path = r'C:\Users\MSI\Documents\luna\example_lunaB.xlsx'
+import requests
+luna_b_path = r'example_lunaA.xlsx'
 
 
 def read_ips_form_xls(file_path):
@@ -14,30 +14,30 @@ def read_ips_form_xls(file_path):
 
 
 def light_ip(ip):
-    import requests
-    try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0',
-            'Accept': 'application/json, text/javascript, */*; q=0.01',
-            'Accept-Language': 'en-US,en;q=0.5',
-            # 'Accept-Encoding': 'gzip, deflate',
-            'X-Requested-With': 'XMLHttpRequest',
-            'Content-Type': 'text/plain;charset=UTF-8',
-            'Origin': 'http://11.4.0.3',
-            'Authorization': 'Digest username="root", realm="antMiner Configuration", nonce="916414cff72e8d6c1b1433ab59cb6646", uri="/cgi-bin/blink.cgi", response="84c2ed2bf11329dc782a9b85dbbab8d7", qop=auth, nc=0000002f, cnonce="37203e3d903e8fde"',
-            'Connection': 'keep-alive',
-            'Referer': 'http://11.4.0.3/',
-            'Priority': 'u=0',
-        }
+    if(len(ip))>7:
+        try:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0',
+                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                'Accept-Language': 'en-US,en;q=0.5',
+                # 'Accept-Encoding': 'gzip, deflate',
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'text/plain;charset=UTF-8',
+                'Origin': 'http://10.4.0.3',
+                'Authorization': 'Digest username="root", realm="antMiner Configuration", nonce="916414cff72e8d6c1b1433ab59cb6646", uri="/cgi-bin/blink.cgi", response="84c2ed2bf11329dc782a9b85dbbab8d7", qop=auth, nc=0000002f, cnonce="37203e3d903e8fde"',
+                'Connection': 'keep-alive',
+                'Referer': 'http://10.4.0.3/',
+                'Priority': 'u=0',
+            }
 
-        data = '{"blink":true}'
+            data = '{"blink":true}'
 
-        response = requests.post('http://' + ip + '/cgi-bin/blink.cgi', headers=headers, data=data)
-        print(response.json())
-        return ip + ' success'
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")  # 捕获非 requests 的其他异常
-        return ip + ' failure'
+            response = requests.post('http://' + ip + '/cgi-bin/blink.cgi', headers=headers, data=data)
+            print(response.json())
+            return ip + ' success'
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")  # 捕获非 requests 的其他异常
+            return ip + ' failure'
 
 
 if __name__ == '__main__':

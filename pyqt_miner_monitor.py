@@ -52,7 +52,7 @@ def get_miner_mode(ip):
         print("解析错误：返回的数据不是有效的JSON格式")
     except Exception as err:
         print(f"其他错误：{err}")
-    return 0
+    return -1
 
 
 class MiningStatusWidget(QWidget):
