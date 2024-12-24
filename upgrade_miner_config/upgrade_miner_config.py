@@ -51,5 +51,5 @@ def parallel_process_2d(array_2d, func):
 if __name__ == '__main__':
     # upgrade_config_by_ip_and_file('10.10.3.1', './auth/30.auth')
    # upgrade_ips('10.10.3.', 51, 100, './auth/26.auth')
-    task_ips = create_task('10.8.0.', 1, 170, './auth/21.auth')
+    task_ips = create_task('10.6.4.', 1, 60, './auth/13.auth')
     parallel_process_2d(task_ips, up_fun)
