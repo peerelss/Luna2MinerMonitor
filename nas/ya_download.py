@@ -3,7 +3,7 @@ import yfinance as yf
 # 定义股票代码和日期范围
 ticker = "TQQQ"  # 苹果公司股票代码
 start_date = "2010-02-11"  # 起始日期
-end_date = "2024-12-12"  # 结束日期
+end_date = "2024-12-30"  # 结束日期
 
 # 获取股票历史价格
 
