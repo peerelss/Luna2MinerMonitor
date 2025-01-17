@@ -41,6 +41,12 @@ def light_ip(ip):
 
 
 if __name__ == '__main__':
-    ips = read_ips_form_xls(luna_b_path)
-    for ip in ips:
-        print(light_ip(ip))
+   # ips = read_ips_form_xls(luna_b_path)
+   # for ip in ips:
+    #    print(light_ip(ip))
+   # 原始乱码字符串
+   garbled_string = "╦«└Σ╝»╫░╧Σ╣╩╒╧┼┼▓Θ╖╓╬÷"
+
+   # 假设它是 GBK 编码被误解为 Latin-1
+   fixed_string = garbled_string.encode('latin-1').decode('gbk')
+   print(fixed_string)

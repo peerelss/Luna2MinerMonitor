@@ -4,7 +4,7 @@ import requests
 
 # 文件路径和 Sheet 名称
 input_file_path = r'C:\Users\MSI\Downloads\一期比特大陆s19xp型号IP和SN统计(1).xlsx'  # 替换为你的文件路径
-input_file_path_luna1 = r'C:\Users\MSI\Downloads\二期比特大陆s19xp型号IP和SN统计(8).xlsx'
+input_file_path_luna2 = r'C:\Users\MSI\Downloads\二期比特大陆s19xp型号IP和SN统计(9).xlsx'
 sheet_names_xp = ['4号厂房', '5号厂房', '6号厂房', '7号厂房', '11号厂房', '12号厂房', '13号厂房', '14号厂房',
                   '15号厂房']
 sheet_names_s21 = ['1号厂房', '8号厂房', '9号厂房', '10号厂房']
@@ -56,11 +56,16 @@ def get_sn_by_ip(ip):
 
 
 def is_sn_correct(ip, sn):
-    sn_from_ip = get_sn_by_ip(ip.strip()).replace('EAU', 'EAB').replace('EXU', 'EXB')
+    sn_from_ip = get_sn_by_ip(ip.strip())
     # print(f"ip: {ip},sn:{sn},sn_form_ip:{sn_from_ip}")
-    if len(sn_from_ip) != 17 or sn != sn_from_ip:
+    if len(sn_from_ip) != 17 or sn[-4:] != sn_from_ip[-4:]:
         print(f"ip: {ip},sn:{sn},sn_form_ip:{sn_from_ip}")
 
 
+def set_miner_ip_to_dhcp():
+    pass
+
+
+
 if __name__ == '__main__':
-    get_ip_sn_from_xlsx(input_file_path, sheet_names)
+    get_ip_sn_from_xlsx(input_file_path_luna2, sheet_names_s21)
